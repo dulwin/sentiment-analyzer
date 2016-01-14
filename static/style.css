@@ -1,0 +1,69 @@
+html {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+body { margin: 0; font-size: 18px; height: 100%; }
+
+section#sentence-box{
+    width: 100%;
+    background-color: #e6e6e6;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    display: block;
+    padding: 60px 0
+}
+
+section#sentence-box div {
+    width: 80%;
+    margin: auto;
+}
+
+section#sentence-box input {
+    min-width: 60%;
+    margin-left: 2%;
+    max-width: 600px;
+    border: none;
+    height: 1.8rem;
+    font-size: 1rem;
+    padding: 5px 10px;
+    background-color:#FFF;
+}
+
+section#sentence-box button {
+    border: none;
+    margin-left: 5%;
+    height: 2.4rem;
+    min-width: 10%;
+    max-width: 100px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+#results { width: 100%; background: #eee; height: 90%; background-color: #1976D2; }
+#results .section {
+    width: 25%;
+    height: 100%;
+    color: #fff;
+    float:left;
+    text-align: center;
+}
+
+#results .section h3 {
+    margin-top: 50%;
+}
+
+.grey { background-color: #727272 !important; }
+.dark-blue { background-color: #1976D2 !important; }
+.indigo { background-color: #303F9F !important; }
+.yellow { background-color: #FBC02D !important; }
+.amber { background-color: #FFA000 !important; }
+.orange { background-color: #FF5722 !important; }
+.red { background-color: #F44336 !important; }
+.dark-red { background-color: #D32F2F !important; }
+.green { background-color: #4CAF50 !important; }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sentiment Analyzer</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <section id="sentence-box">
+        <div>
+            <form name='sentence-from'>
+                Write a sentence:
+                <input type="text" name="sentence">&#9;&#9;
+                <button id='submit' type="submit" value="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+    <section id="results">
+        <div class="section" id="polarity">
+            <h1>Polarity:</h1>
+            <h3></h3>
+        </div>
+        <div class="section" id="intensity">
+            <h1 class='title'>Intensity:</h1>
+            <h3></h3>
+        </div>
+        <div class="section" id="attitude">
+            <h1>Attitude:</h1>
+            <h3></h3>
+        </div>
+        <div class="section" id="expression">
+            <h1>Expression Intensity:</h1>
+            <h3></h3>
+        </div>
+    </section>
+</body>
+<script src="/script.js"></script>
+</html>

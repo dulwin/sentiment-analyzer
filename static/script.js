@@ -77,3 +77,7 @@ submit.click( function(e) {
     }
     return;
 });
+
+$('.info').click( function(e) {
+    $('#'+$(this).attr('metric')).slideToggle()
+})

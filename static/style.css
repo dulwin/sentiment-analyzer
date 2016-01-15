@@ -67,3 +67,12 @@ section#sentence-box button {
 .red { background-color: #F44336 !important; }
 .dark-red { background-color: #D32F2F !important; }
 .green { background-color: #4CAF50 !important; }
+
+.metrics {
+    display:inline-block;
+    text-align: center;
+    margin:auto;
+    font-size: 0.8rem;
+}
+
+.metrics table thead { font-weight: bold; }

@@ -1,5 +1,6 @@
-
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from sklearn.metrics import classification_report
+from sklearn.cross_validation import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.externals.joblib import dump,load
 import numpy as np
@@ -31,38 +32,7 @@ def make_predict( clfs, cvect, cat_dict, text ):
     for cat,clf in clfs.items():
         prediction = np.squeeze(clf.predict(cvect.transform([text])))
         if 1 in prediction:
-            ret_dict[cat] = { 'category':cat_dict[cat][prediction.tolist().index(1)], 'index':prediction.tolist().index(1)+1 }
+            ret_dict[cat] = { 'category':cat_dict[cat][prediction.tolist().index(1)] }
         else:
-            ret_dict[cat] = { 'category':'none', 'index':0 }
+            ret_dict[cat] = { 'category':'none' }
     return ret_dict
-
-# def train_classifiers(M,Y):
-#     y_dict = {
-#         'polarity': Y[:, :10],
-#         'intensity': Y[:, 10:17],
-#         'expression': Y[:, 17:22],
-#         'attitude': Y[:, 22:37]
-#     }
-#
-#     classifiers = {}
-#
-#     for cat, y in y_dict.items():
-#         # remove data that doesn't provide any insight ( rows containing all 0s )
-#         goodrows = np.where(y.sum(1)>0)[0]
-#         y = y[goodrows, :]
-#         m = M[goodrows, :]
-#
-#         m_ = TfidfTransformer(use_idf=True, sublinear_tf=True).fit_transform(m)
-#
-#         classifiers[cat] = RandomForestClassifier(n_estimators=25).fit(m_, y)
-#
-#     return classifiers
-
-# if __name__ == '__main__':
-#     cvect = CountVectorizer(ngram_range=(1,3), max_df=0.75)
-#
-#     M, Y, category_dictonary, cvect = make_m_y(cvect)
-#     clfs = train_classifiers(M,Y)
-#
-#     for cat,clf in clfs.items():
-#         dump(clf, 'classifiers/%s.pkl' % cat)

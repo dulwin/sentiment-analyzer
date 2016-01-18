@@ -6,7 +6,7 @@ from sklearn.externals.joblib import dump,load
 import numpy as np
 
 def load_clfs():
-    cvect = load('classifiers/cvect.pkl')
+    cvect = load('/classifiers/cvect.pkl')
 
     cat_dict = {
         'polarity': ['positive', 'negative', 'both', 'neutral', 'uncertain-positive',
@@ -23,7 +23,7 @@ def load_clfs():
     clfs = {}
 
     for k, _ in cat_dict.items():
-        clfs[k] = load('classifiers/%s.pkl' % k)
+        clfs[k] = load('/classifiers/%s.pkl' % k)
 
     return [clfs, cvect, cat_dict]
 

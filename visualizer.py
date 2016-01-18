@@ -4,7 +4,6 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.externals.joblib import dump,load
 import numpy as np
-import urllib
 
 clfs, cvect, cat_dict = load_clfs()
 app = Flask(__name__, static_url_path='')
@@ -18,4 +17,4 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5001)
